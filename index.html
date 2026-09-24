@@ -1,15 +1,38 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <title>Portofolio Kelompok</title>
-</head>
-<body>
-  <h1>Pilih Portofolio:</h1>
-  <ul>
-    <li><a href="./Anugrah-Linson/index.html">Portofolio Anugrah Linson</a></li>
-    <li><a href="./Azwar-Riansyah/index.html">Portofolio Azwar Riansyah</a></li>
-    <li><a href="./Danuardi-Saputro/index.html">Portofolio Danuardi Saputro</a></li>
-  </ul>
-</body>
-</html>
+name: Deploy Portfolio to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # Ganti path di bawah ini kalau nama/lokasi foldernya berbeda
+      - name: Upload site folder as artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "./Tugas Project Github"
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
