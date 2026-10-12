@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Tugas Project Github — Kelompok 2 | Portofolio Digital Mahasiswa</title>
-  <meta name="description" content="Platform portofolio terpadu Kelompok 2 untuk Tugas Project UTS 1 GitHub Basics - Teknik Informatika UIN Syarif Hidayatullah Jakarta.">
+  <title>Portofolio Kelompok 2 — Teknik Informatika UIN Jakarta</title>
+  <meta name="description" content="Platform portofolio minimalis Kelompok 2 - Teknik Informatika UIN Syarif Hidayatullah Jakarta.">
   
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
   
   <!-- Tailwind CSS -->
@@ -20,18 +20,15 @@
       theme: {
         extend: {
           colors: {
-            "canvas-void": "#090A0F",
-            "canvas-space": "#0E1015",
-            "surface-titanium": "#161820",
-            "surface-graphite": "#1F222E",
-            "deck-ceramic": "#F5F5F7",
-            "surface-ceramic": "#FFFFFF",
-            "text-onyx": "#09090B",
-            "text-charcoal": "#27272A",
-            "text-zinc": "#71717A",
-            "text-silver": "#D4D4D8",
-            "border-hairline-dark": "rgba(255, 255, 255, 0.14)",
-            "border-hairline-light": "rgba(0, 0, 0, 0.08)",
+            "canvas-void": "#08080A",
+            "canvas-surface": "#121214",
+            "deck-ceramic": "#F4F4F6",
+            "card-surface": "#FFFFFF",
+            "text-dark": "#0A0A0C",
+            "text-muted": "#71717A",
+            "text-subtle": "#A1A1AA",
+            "border-dark": "rgba(255, 255, 255, 0.12)",
+            "border-light": "rgba(0, 0, 0, 0.08)",
           },
           fontFamily: {
             sans: ["Plus Jakarta Sans", "sans-serif"],
@@ -43,44 +40,41 @@
   </script>
   <style>
     html { scroll-behavior: smooth; }
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #090A0F; }
-    ::-webkit-scrollbar-thumb { background: #27272A; border-radius: 4px; }
-    ::-webkit-scrollbar-thumb:hover { background: #3F3F46; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #08080A; }
+    ::-webkit-scrollbar-thumb { background: #27272A; border-radius: 3px; }
   </style>
 </head>
-<body class="bg-canvas-void font-sans text-text-silver antialiased selection:bg-surface-ceramic selection:text-text-onyx min-h-screen">
+<body class="bg-canvas-void font-sans text-neutral-300 antialiased selection:bg-white selection:text-black min-h-screen">
 
-  <!-- TOP FLOATING CAPSULE NAVIGATION -->
+  <!-- MINIMAL FLOATING NAVIGATION -->
   <header class="fixed top-0 inset-x-0 z-50 flex items-center justify-center p-3 md:p-5 pointer-events-none">
-    <nav class="pointer-events-auto flex items-center justify-between gap-3 md:gap-6 px-4 md:px-6 py-2.5 rounded-full bg-surface-titanium/80 backdrop-blur-2xl border border-border-hairline-dark shadow-2xl">
+    <nav class="pointer-events-auto flex items-center justify-between gap-4 md:gap-8 px-5 py-2.5 rounded-full bg-neutral-900/80 backdrop-blur-2xl border border-border-dark shadow-2xl">
       <div class="flex items-center gap-2">
-        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span class="font-mono text-xs md:text-sm font-semibold tracking-wider text-white">KELOMPOK 2</span>
-        <span class="hidden sm:inline-block text-xs text-text-zinc">| 3D TI</span>
+        <span class="w-2 h-2 rounded-full bg-white"></span>
+        <span class="font-mono text-xs font-semibold tracking-wider text-white">KELOMPOK 2</span>
+        <span class="text-xs text-neutral-500 hidden sm:inline">| 3D TI</span>
       </div>
       
-      <div class="hidden md:flex items-center gap-1.5 font-mono text-xs">
-        <a href="#danuardi-dossier" class="px-3 py-1 rounded-full text-text-silver hover:text-white hover:bg-white/10 transition">Danuardi</a>
-        <a href="#anugrah-dossier" class="px-3 py-1 rounded-full text-text-silver hover:text-white hover:bg-white/10 transition">Anugrah</a>
-        <a href="#azwar-dossier" class="px-3 py-1 rounded-full text-text-silver hover:text-white hover:bg-white/10 transition">Azwar</a>
+      <div class="hidden md:flex items-center gap-1 font-mono text-xs">
+        <a href="#danuardi" class="px-3 py-1 rounded-full text-neutral-400 hover:text-white hover:bg-white/10 transition">Danuardi</a>
+        <a href="#anugrah" class="px-3 py-1 rounded-full text-neutral-400 hover:text-white hover:bg-white/10 transition">Anugrah</a>
+        <a href="#azwar" class="px-3 py-1 rounded-full text-neutral-400 hover:text-white hover:bg-white/10 transition">Azwar</a>
       </div>
 
-      <div class="flex items-center gap-2">
-        <a href="https://github.com/Azwarrian/Group2_Github_Basics" target="_blank" rel="noopener" class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-mono transition border border-white/10">
-          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          <span>Repo</span>
-        </a>
-      </div>
+      <a href="https://github.com/Azwarrian/Group2_Github_Basics" target="_blank" rel="noopener" class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-mono transition border border-white/10">
+        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        <span>GitHub</span>
+      </a>
     </nav>
   </header>
 
   <main class="w-full pt-16 md:pt-20 bg-canvas-void">
-    <!-- SECTION 1: UPPER CINEMATIC HERO (OBSIDIAN VOID WITH THREE.JS 3D WAVE & SPHERE) -->
-    <section class="relative w-full overflow-hidden bg-canvas-void text-text-silver pt-8 pb-20 md:pb-28 px-4 sm:px-8 lg:px-12">
+    <!-- SECTION 1: MONOCHROME 3D HERO -->
+    <section class="relative w-full overflow-hidden bg-canvas-void text-neutral-300 pt-10 pb-20 md:pb-28 px-4 sm:px-8">
       
-      <!-- Interactive Three.js Canvas -->
-      <div class="absolute inset-0 w-full h-[640px] bg-transparent pointer-events-auto opacity-70 mix-blend-screen" id="threejs-container" style="display:block;">
+      <!-- Interactive Three.js 3D Wave & Sphere -->
+      <div class="absolute inset-0 w-full h-[640px] bg-transparent pointer-events-auto opacity-70 mix-blend-screen" id="threejs-container">
         <script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
         <script>
         (function() {
@@ -100,13 +94,11 @@
           renderer.toneMappingExposure = 1.1;
           container.appendChild(renderer.domElement);
 
-          // Lighting
-          const ambientLight = new THREE.AmbientLight(0xffffff, 0.85);
-          scene.add(ambientLight);
-
-          const mainDirLight = new THREE.DirectionalLight(0xffffff, 2.2);
-          mainDirLight.position.set(12, 20, 15);
-          scene.add(mainDirLight);
+          // Monochrome Lights
+          scene.add(new THREE.AmbientLight(0xffffff, 0.85));
+          const mainLight = new THREE.DirectionalLight(0xffffff, 2.2);
+          mainLight.position.set(12, 20, 15);
+          scene.add(mainLight);
 
           const rimLight = new THREE.DirectionalLight(0xd4d4d8, 2.8);
           rimLight.position.set(-15, -8, -10);
@@ -116,11 +108,11 @@
           pointLight.position.set(0, 3, 5);
           scene.add(pointLight);
 
-          // Floating Chrome/Pearl Sphere
+          // Monochrome Floating Chrome Sphere
           const sphereGeo = new THREE.SphereGeometry(3.6, 64, 64);
           const sphereMat = new THREE.MeshPhysicalMaterial({
-            color: 0xefeff3,
-            emissive: 0x111116,
+            color: 0xeeeeee,
+            emissive: 0x111114,
             roughness: 0.12,
             metalness: 0.85,
             clearcoat: 1.0,
@@ -131,14 +123,14 @@
           sphereMesh.position.set(0, 2.2, 0);
           scene.add(sphereMesh);
 
-          // Orbital Rings
+          // Rings
           const ringGeo1 = new THREE.TorusGeometry(5.2, 0.04, 16, 120);
           const ringMat = new THREE.MeshStandardMaterial({
             color: 0xffffff,
             roughness: 0.2,
             metalness: 0.9,
             transparent: true,
-            opacity: 0.65
+            opacity: 0.6
           });
           const ring1 = new THREE.Mesh(ringGeo1, ringMat);
           ring1.rotation.x = Math.PI / 2.8;
@@ -147,7 +139,7 @@
 
           const ringGeo2 = new THREE.TorusGeometry(6.6, 0.03, 16, 140);
           const ringMat2 = new THREE.MeshStandardMaterial({
-            color: 0xa1a1aa,
+            color: 0xaaaaaa,
             roughness: 0.3,
             metalness: 0.8,
             transparent: true,
@@ -158,27 +150,27 @@
           ring2.rotation.y = -Math.PI / 4;
           scene.add(ring2);
 
-          // Topological Wave Mesh
+          // Monochrome Wave Mesh
           const planeWidth = 50;
           const planeHeight = 35;
           const waveGeo = new THREE.PlaneGeometry(planeWidth, planeHeight, 90, 60);
           waveGeo.rotateX(-Math.PI / 2.2);
 
           const waveMat = new THREE.MeshStandardMaterial({
-            color: 0x27272a,
-            emissive: 0x090a0f,
+            color: 0x242428,
+            emissive: 0x08080a,
             roughness: 0.45,
             metalness: 0.85,
             wireframe: true,
             transparent: true,
-            opacity: 0.42
+            opacity: 0.45
           });
           const waveMesh = new THREE.Mesh(waveGeo, waveMat);
           waveMesh.position.set(0, -6.5, -4);
           scene.add(waveMesh);
 
-          // Ambient particle dust
-          const particleCount = 200;
+          // Dust particles
+          const particleCount = 180;
           const particleGeo = new THREE.BufferGeometry();
           const particlePos = new Float32Array(particleCount * 3);
           for (let i = 0; i < particleCount * 3; i += 3) {
@@ -191,7 +183,7 @@
             color: 0xffffff,
             size: 0.08,
             transparent: true,
-            opacity: 0.55
+            opacity: 0.5
           });
           const particles = new THREE.Points(particleGeo, particleMat);
           scene.add(particles);
@@ -256,187 +248,162 @@
         </script>
       </div>
 
-      <!-- Hero Overlays -->
-      <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-canvas-void/50 to-canvas-void"></div>
+      <!-- Hero Overlay -->
+      <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-canvas-void/60 to-canvas-void"></div>
       
-      <div class="relative z-10 max-w-5xl mx-auto flex flex-col items-center text-center">
-        <!-- Tactical Badge -->
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-titanium/90 backdrop-blur-xl shadow-lg border border-border-hairline-dark">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span class="font-mono text-xs font-semibold tracking-wider text-white uppercase">PROJECT UTS 1 • GITHUB BASICS</span>
+      <div class="relative z-10 max-w-4xl mx-auto flex flex-col items-center text-center">
+        <!-- Minimal Badge -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-neutral-900/90 border border-border-dark text-neutral-400 font-mono text-[11px] uppercase tracking-wider">
+          <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+          <span>UTS Sistem Basis Data • Kelompok 2</span>
         </div>
 
         <!-- Headline -->
-        <h1 class="mt-6 text-4xl sm:text-6xl md:text-7xl font-extrabold text-white tracking-tight leading-tight">
-          PORTOFOLIO DIGITAL
+        <h1 class="mt-6 text-4xl sm:text-6xl md:text-7xl font-bold text-white tracking-tight leading-tight">
+          PORTOFOLIO
         </h1>
         
         <!-- Subtext -->
-        <p class="mt-4 max-w-2xl text-base sm:text-lg text-text-zinc leading-relaxed">
-          Platform portofolio kolaboratif Kelompok 2 untuk mata kuliah Sistem Basis Data. Menampilkan keahlian Machine Learning &amp; AI, UI/UX Design, dan Data Engineering.
+        <p class="mt-4 max-w-xl text-sm sm:text-base text-neutral-400 leading-relaxed">
+          Platform portofolio anggota Kelompok 2 Teknik Informatika, UIN Syarif Hidayatullah Jakarta.
         </p>
 
-        <!-- Member Quick Tabs -->
+        <!-- Minimal Member Navigation Pills -->
         <div class="mt-8 flex flex-wrap items-center justify-center gap-2 font-mono text-xs">
-          <a href="#danuardi-dossier" class="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/10 backdrop-blur-md transition flex items-center gap-2">
-            <span class="text-amber-400">01</span> Danuardi Saputro — ML &amp; AI
+          <a href="#danuardi" class="px-4 py-1.5 rounded-full bg-neutral-900/90 hover:bg-neutral-800 text-neutral-300 hover:text-white border border-border-dark transition">
+            Danuardi Saputro
           </a>
-          <a href="#anugrah-dossier" class="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/10 backdrop-blur-md transition flex items-center gap-2">
-            <span class="text-violet-400">02</span> Anugrah Linson — UI/UX
+          <a href="#anugrah" class="px-4 py-1.5 rounded-full bg-neutral-900/90 hover:bg-neutral-800 text-neutral-300 hover:text-white border border-border-dark transition">
+            Anugrah Linson
           </a>
-          <a href="#azwar-dossier" class="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/10 backdrop-blur-md transition flex items-center gap-2">
-            <span class="text-emerald-400">03</span> Azwar Riansyah — Data ML
+          <a href="#azwar" class="px-4 py-1.5 rounded-full bg-neutral-900/90 hover:bg-neutral-800 text-neutral-300 hover:text-white border border-border-dark transition">
+            Azwar Riansyah
           </a>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 2: CERAMIC SPECIFICATION DECK (LIGHT CONTRAST FOUNDATION) -->
-    <section class="relative w-full -mt-6 pt-16 pb-24 px-4 sm:px-8 lg:px-12 bg-deck-ceramic text-text-onyx rounded-t-[36px] md:rounded-t-[52px] shadow-[0_-24px_64px_rgba(0,0,0,0.65)]">
-      <div class="max-w-7xl mx-auto">
+    <!-- SECTION 2: CERAMIC DECK (PURE MONOCHROME) -->
+    <section class="relative w-full -mt-6 pt-16 pb-24 px-4 sm:px-8 lg:px-12 bg-deck-ceramic text-text-dark rounded-t-[32px] md:rounded-t-[48px] shadow-[0_-20px_50px_rgba(0,0,0,0.5)]">
+      <div class="max-w-6xl mx-auto">
         
-        <!-- Header of Ceramic Deck -->
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-8 border-b border-border-hairline-light">
-          <div class="flex flex-col gap-1">
-            <span class="font-mono text-xs font-semibold uppercase tracking-wider text-text-zinc">02 // DOSSIER MAHASISWA &amp; PORTOFOLIO</span>
-            <h2 class="text-2xl sm:text-4xl font-bold text-text-onyx tracking-tight">Pilih Portofolio Anggota Kelompok</h2>
+        <!-- Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-3 pb-8 border-b border-border-light">
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-text-dark tracking-tight">Anggota Kelompok</h2>
+            <p class="text-sm text-neutral-500 mt-1">Pilih portofolio untuk melihat informasi detail dan karya masing-masing anggota.</p>
           </div>
-          <p class="text-sm text-text-zinc max-w-md">
-            Klik salah satu tombol portofolio di bawah untuk melihat rincian keahlian, proyek pemodelan, dan profil lengkap masing-masing anggota.
-          </p>
         </div>
 
-        <!-- 3 MEMBER CARDS GRID -->
-        <div class="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+        <!-- 3 MEMBER CARDS (NO IMAGES, NO KICKERS, ULTRA-MINIMALIST) -->
+        <div class="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
           
           <!-- CARD 1: DANUARDI SAPUTRO -->
-          <div class="flex flex-col justify-between rounded-3xl bg-surface-ceramic p-6 sm:p-8 shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl border border-border-hairline-light" id="danuardi-dossier">
+          <div class="flex flex-col justify-between rounded-2xl bg-card-surface p-6 sm:p-7 shadow-sm hover:shadow-md transition-all duration-200 border border-border-light" id="danuardi">
             <div>
-              <div class="flex items-start justify-between gap-3 mb-4">
-                <div class="flex flex-col">
-                  <span class="font-mono text-xs font-bold text-amber-600 uppercase tracking-wider">01 // ML &amp; AI SPECIALIST</span>
-                  <h3 class="text-2xl font-bold text-text-onyx mt-1">Danuardi Saputro</h3>
-                  <span class="text-xs text-text-zinc font-mono mt-0.5">NIM: 125420128</span>
+              <div class="flex items-start justify-between gap-3 pb-4 border-b border-neutral-100">
+                <div>
+                  <h3 class="text-xl font-bold text-text-dark">Danuardi Saputro</h3>
+                  <span class="text-xs text-neutral-500 font-medium block mt-0.5">Machine Learning &amp; AI</span>
+                  <span class="text-[11px] text-neutral-400 font-mono block mt-0.5">NIM 125420128</span>
                 </div>
-                <span class="px-2.5 py-1 rounded-full bg-amber-50 text-amber-700 font-mono text-xs font-bold border border-amber-200">
+                <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-text-dark font-mono text-xs font-semibold border border-neutral-200">
                   IPK 3.96
                 </span>
               </div>
 
-              <!-- Profile Photo -->
-              <div class="relative w-full h-56 rounded-2xl overflow-hidden mb-5 bg-neutral-100 border border-neutral-200">
-                <img class="w-full h-full object-cover" src="Danuardi%20Saputro/Screenshot%202026-09-24%20071407.png" alt="Danuardi Saputro">
-                <div class="absolute bottom-2 left-2 px-3 py-1 rounded-full bg-black/80 backdrop-blur-md text-white font-mono text-[10px] uppercase font-semibold">
-                  Machine Learning &amp; AI
-                </div>
-              </div>
-
               <!-- Description -->
-              <p class="text-sm text-text-charcoal leading-relaxed mb-5">
-                Membangun model machine learning &amp; deep learning end-to-end, mulai dari pemrosesan data hingga deployment aplikasi Streamlit interaktif (Liver Disease, Customer Churn, &amp; House Price Prediction).
+              <p class="text-sm text-neutral-600 leading-relaxed mt-5 mb-6">
+                Fokus pada pemodelan machine learning dan deep learning end-to-end, pemrosesan data, serta deployment model interaktif berbasis Streamlit.
               </p>
 
-              <!-- Metrics Mini Bar -->
-              <div class="grid grid-cols-3 gap-2 p-3 rounded-xl bg-deck-ceramic text-center mb-5 font-mono">
+              <!-- Metrics -->
+              <div class="grid grid-cols-3 gap-2 p-3 rounded-xl bg-neutral-100 text-center mb-6 font-mono text-xs">
                 <div>
-                  <span class="block text-xs text-text-zinc">IPK</span>
-                  <span class="text-sm font-bold text-text-onyx">3.96</span>
+                  <span class="block text-[10px] text-neutral-500 uppercase">IPK</span>
+                  <span class="text-sm font-bold text-text-dark">3.96</span>
                 </div>
                 <div>
-                  <span class="block text-xs text-text-zinc">Models</span>
-                  <span class="text-sm font-bold text-text-onyx">3 Live</span>
+                  <span class="block text-[10px] text-neutral-500 uppercase">Models</span>
+                  <span class="text-sm font-bold text-text-dark">3</span>
                 </div>
                 <div>
-                  <span class="block text-xs text-text-zinc">ROC-AUC</span>
-                  <span class="text-sm font-bold text-text-onyx">0.81</span>
+                  <span class="block text-[10px] text-neutral-500 uppercase">ROC-AUC</span>
+                  <span class="text-sm font-bold text-text-dark">0.81</span>
                 </div>
               </div>
 
-              <!-- Tech Badges -->
+              <!-- Tech Pills -->
               <div class="flex flex-wrap gap-1.5 mb-6 font-mono text-[11px]">
-                <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-800">Python</span>
-                <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-800">Scikit-Learn</span>
-                <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-800">XGBoost</span>
-                <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-800">Streamlit</span>
+                <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-700">Python</span>
+                <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-700">Scikit-Learn</span>
+                <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-700">XGBoost</span>
+                <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-700">Streamlit</span>
               </div>
             </div>
 
             <!-- Action Buttons -->
-            <div class="flex items-center gap-2 pt-4 border-t border-border-hairline-light">
-              <a href="Danuardi%20Saputro/index.html" class="flex-1 py-3 px-4 rounded-full bg-text-onyx text-white font-mono text-xs uppercase font-semibold hover:bg-neutral-800 active:scale-95 transition-all shadow-md flex items-center justify-center gap-2">
+            <div class="flex items-center gap-2 pt-4 border-t border-neutral-100">
+              <a href="Danuardi%20Saputro/index.html" class="flex-1 py-2.5 px-4 rounded-full bg-black text-white font-mono text-xs uppercase font-medium hover:bg-neutral-800 active:scale-95 transition-all flex items-center justify-center gap-2">
                 <span>Buka Portofolio</span>
                 <span class="material-symbols-outlined text-sm">arrow_outward</span>
               </a>
-              <a href="https://github.com/Danuardi-Saputro" target="_blank" rel="noopener" class="p-3 rounded-full bg-neutral-100 hover:bg-neutral-200 text-text-onyx active:scale-95 transition-all shadow-sm flex items-center justify-center" title="GitHub">
+              <a href="https://github.com/Danuardi-Saputro" target="_blank" rel="noopener" class="p-2.5 rounded-full bg-neutral-100 hover:bg-neutral-200 text-text-dark transition flex items-center justify-center" title="GitHub">
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
               </a>
-              <a href="https://www.linkedin.com/in/danuardi-saputro" target="_blank" rel="noopener" class="p-3 rounded-full bg-neutral-100 hover:bg-neutral-200 text-text-onyx active:scale-95 transition-all shadow-sm flex items-center justify-center" title="LinkedIn">
+              <a href="https://www.linkedin.com/in/danuardi-saputro" target="_blank" rel="noopener" class="p-2.5 rounded-full bg-neutral-100 hover:bg-neutral-200 text-text-dark transition flex items-center justify-center" title="LinkedIn">
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.761-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
               </a>
             </div>
           </div>
 
           <!-- CARD 2: ANUGRAH LINSON PUTRA ADITAMA -->
-          <div class="flex flex-col justify-between rounded-3xl bg-surface-ceramic p-6 sm:p-8 shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl border border-border-hairline-light" id="anugrah-dossier">
+          <div class="flex flex-col justify-between rounded-2xl bg-card-surface p-6 sm:p-7 shadow-sm hover:shadow-md transition-all duration-200 border border-border-light" id="anugrah">
             <div>
-              <div class="flex items-start justify-between gap-3 mb-4">
-                <div class="flex flex-col">
-                  <span class="font-mono text-xs font-bold text-violet-600 uppercase tracking-wider">02 // UI/UX &amp; DESIGN SPECIALIST</span>
-                  <h3 class="text-2xl font-bold text-text-onyx mt-1">Anugrah Linson</h3>
-                  <span class="text-xs text-text-zinc font-mono mt-0.5">UIN Syarif Hidayatullah</span>
+              <div class="flex items-start justify-between gap-3 pb-4 border-b border-neutral-100">
+                <div>
+                  <h3 class="text-xl font-bold text-text-dark">Anugrah Linson</h3>
+                  <span class="text-xs text-neutral-500 font-medium block mt-0.5">UI/UX &amp; Desain Visual</span>
+                  <span class="text-[11px] text-neutral-400 font-mono block mt-0.5">UIN Syarif Hidayatullah</span>
                 </div>
-                <span class="px-2.5 py-1 rounded-full bg-violet-50 text-violet-700 font-mono text-xs font-bold border border-violet-200">
+                <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-text-dark font-mono text-xs font-semibold border border-neutral-200">
                   IPK 3.76
                 </span>
               </div>
 
-              <!-- Visual Studio Graphic -->
-              <div class="relative w-full h-56 rounded-2xl overflow-hidden mb-5 bg-neutral-900 border border-neutral-200 flex items-center justify-center p-6">
-                <div class="text-center">
-                  <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-violet-600 to-rose-400 mx-auto flex items-center justify-center text-white text-2xl font-bold shadow-lg mb-3">
-                    AL
-                  </div>
-                  <span class="text-white text-sm font-semibold">UI/UX &amp; Visual Design</span>
-                  <p class="text-xs text-neutral-400 mt-1">Figma Design Systems &amp; Visual Assets</p>
-                </div>
-                <div class="absolute bottom-2 left-2 px-3 py-1 rounded-full bg-black/80 backdrop-blur-md text-white font-mono text-[10px] uppercase font-semibold">
-                  Creative Studio
-                </div>
-              </div>
-
               <!-- Description -->
-              <p class="text-sm text-text-charcoal leading-relaxed mb-5">
-                Memadukan pondasi teknis TI dengan kreativitas merancang elemen antarmuka di Figma dan Canva, didukung pengalaman organisasi aktif di bidang hubungan antar-lembaga HIMTI UIN Jakarta.
+              <p class="text-sm text-neutral-600 leading-relaxed mt-5 mb-6">
+                Mengeksplorasi perancangan visual antarmuka pengguna di Figma dan Canva, didukung pengalaman organisasi aktif di HIMTI UIN Jakarta.
               </p>
 
-              <!-- Metrics Mini Bar -->
-              <div class="grid grid-cols-3 gap-2 p-3 rounded-xl bg-deck-ceramic text-center mb-5 font-mono">
+              <!-- Metrics -->
+              <div class="grid grid-cols-3 gap-2 p-3 rounded-xl bg-neutral-100 text-center mb-6 font-mono text-xs">
                 <div>
-                  <span class="block text-xs text-text-zinc">IPK</span>
-                  <span class="text-sm font-bold text-text-onyx">3.76</span>
+                  <span class="block text-[10px] text-neutral-500 uppercase">IPK</span>
+                  <span class="text-sm font-bold text-text-dark">3.76</span>
                 </div>
                 <div>
-                  <span class="block text-xs text-text-zinc">Tools</span>
-                  <span class="text-sm font-bold text-text-onyx">Figma</span>
+                  <span class="block text-[10px] text-neutral-500 uppercase">Tools</span>
+                  <span class="text-sm font-bold text-text-dark">Figma</span>
                 </div>
                 <div>
-                  <span class="block text-xs text-text-zinc">Org</span>
-                  <span class="text-sm font-bold text-text-onyx">HIMTI</span>
+                  <span class="block text-[10px] text-neutral-500 uppercase">Org</span>
+                  <span class="text-sm font-bold text-text-dark">HIMTI</span>
                 </div>
               </div>
 
-              <!-- Tech Badges -->
+              <!-- Tech Pills -->
               <div class="flex flex-wrap gap-1.5 mb-6 font-mono text-[11px]">
-                <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-800">UI/UX Design</span>
-                <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-800">Figma</span>
-                <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-800">Canva</span>
-                <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-800">Design System</span>
+                <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-700">UI/UX Design</span>
+                <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-700">Figma</span>
+                <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-700">Canva</span>
+                <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-700">Design System</span>
               </div>
             </div>
 
             <!-- Action Buttons -->
-            <div class="flex items-center gap-2 pt-4 border-t border-border-hairline-light">
-              <a href="Anugrah%20Linson%20Putra%20Aditama/index.html" class="flex-1 py-3 px-4 rounded-full bg-text-onyx text-white font-mono text-xs uppercase font-semibold hover:bg-neutral-800 active:scale-95 transition-all shadow-md flex items-center justify-center gap-2">
+            <div class="flex items-center gap-2 pt-4 border-t border-neutral-100">
+              <a href="Anugrah%20Linson%20Putra%20Aditama/index.html" class="flex-1 py-2.5 px-4 rounded-full bg-black text-white font-mono text-xs uppercase font-medium hover:bg-neutral-800 active:scale-95 transition-all flex items-center justify-center gap-2">
                 <span>Buka Portofolio</span>
                 <span class="material-symbols-outlined text-sm">arrow_outward</span>
               </a>
@@ -444,71 +411,52 @@
           </div>
 
           <!-- CARD 3: AZWAR RIANSYAH -->
-          <div class="flex flex-col justify-between rounded-3xl bg-surface-ceramic p-6 sm:p-8 shadow-xl transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl border border-border-hairline-light" id="azwar-dossier">
+          <div class="flex flex-col justify-between rounded-2xl bg-card-surface p-6 sm:p-7 shadow-sm hover:shadow-md transition-all duration-200 border border-border-light" id="azwar">
             <div>
-              <div class="flex items-start justify-between gap-3 mb-4">
-                <div class="flex flex-col">
-                  <span class="font-mono text-xs font-bold text-emerald-600 uppercase tracking-wider">03 // DATA &amp; INFRASTRUCTURE</span>
-                  <h3 class="text-2xl font-bold text-text-onyx mt-1">Azwar Riansyah</h3>
-                  <span class="text-xs text-text-zinc font-mono mt-0.5">UIN Syarif Hidayatullah</span>
+              <div class="flex items-start justify-between gap-3 pb-4 border-b border-neutral-100">
+                <div>
+                  <h3 class="text-xl font-bold text-text-dark">Azwar Riansyah</h3>
+                  <span class="text-xs text-neutral-500 font-medium block mt-0.5">Data Engineering &amp; ML</span>
+                  <span class="text-[11px] text-neutral-400 font-mono block mt-0.5">UIN Syarif Hidayatullah</span>
                 </div>
-                <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 font-mono text-xs font-bold border border-emerald-200">
+                <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-text-dark font-mono text-xs font-semibold border border-neutral-200">
                   IPK 3.79
                 </span>
               </div>
 
-              <!-- Terminal Preview Graphic -->
-              <div class="relative w-full h-56 rounded-2xl overflow-hidden mb-5 bg-[#0D1117] border border-neutral-700 p-4 font-mono text-xs flex flex-col justify-between">
-                <div>
-                  <div class="flex items-center gap-1.5 mb-3">
-                    <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
-                    <span class="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
-                    <span class="w-2.5 h-2.5 rounded-full bg-green-500"></span>
-                    <span class="text-[10px] text-neutral-400 ml-2">azwar@data-cluster:~</span>
-                  </div>
-                  <p class="text-emerald-400">$ cat profile.json</p>
-                  <p class="text-neutral-300 mt-1">"nama": "Azwar Riansyah",</p>
-                  <p class="text-neutral-300">"fokus": "Data Engineering &amp; ML",</p>
-                  <p class="text-neutral-300">"status": "Active Pipeline Ready"</p>
-                </div>
-                <div class="flex justify-between items-center text-[10px] text-neutral-400 pt-2 border-t border-neutral-800">
-                  <span>POSTGRES • PANDAS • FASTAPI</span>
-                </div>
-              </div>
-
               <!-- Description -->
-              <p class="text-sm text-text-charcoal leading-relaxed mb-5">
-                Berfokus pada pengolahan data tabular, data engineering, optimasi kueri basis data relasional, serta perancangan data pipeline terintegrasi machine learning.
+              <p class="text-sm text-neutral-600 leading-relaxed mt-5 mb-6">
+                Berfokus pada pengolahan data tabular, perancangan schema relasional, automatisasi data pipeline, serta analisis data machine learning.
               </p>
 
-              <!-- Metrics Mini Bar -->
-              <div class="grid grid-cols-3 gap-2 p-3 rounded-xl bg-deck-ceramic text-center mb-5 font-mono">
+              <!-- Metrics -->
+              <div class="grid grid-cols-3 gap-2 p-3 rounded-xl bg-neutral-100 text-center mb-6 font-mono text-xs">
                 <div>
-                  <span class="block text-xs text-text-zinc">IPK</span>
-                  <span class="text-sm font-bold text-text-onyx">3.79</span>
+                  <span class="block text-[10px] text-neutral-500 uppercase">IPK</span>
+                  <span class="text-sm font-bold text-text-dark">3.79</span>
                 </div>
                 <div>
-                  <span class="block text-xs text-text-zinc">DB</span>
-                  <span class="text-sm font-bold text-text-onyx">Postgres</span>
+                  <span class="block text-[10px] text-neutral-500 uppercase">Database</span>
+                  <span class="text-sm font-bold text-text-dark">Postgres</span>
                 </div>
                 <div>
-                  <span class="block text-xs text-text-zinc">Role</span>
-                  <span class="text-sm font-bold text-text-onyx">Data Eng</span>
+                  <span class="block text-[10px] text-neutral-500 uppercase">Focus</span>
+                  <span class="text-sm font-bold text-text-dark">Data</span>
                 </div>
               </div>
 
-              <!-- Tech Badges -->
+              <!-- Tech Pills -->
               <div class="flex flex-wrap gap-1.5 mb-6 font-mono text-[11px]">
-                <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-800">Data Engineering</span>
-                <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-800">PostgreSQL</span>
-                <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-800">Python</span>
-                <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-800">Pandas</span>
+                <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-700">Data Engineering</span>
+                <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-700">PostgreSQL</span>
+                <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-700">Python</span>
+                <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-700">Pandas</span>
               </div>
             </div>
 
             <!-- Action Buttons -->
-            <div class="flex items-center gap-2 pt-4 border-t border-border-hairline-light">
-              <a href="Azwar-Riansyah/index.html" class="flex-1 py-3 px-4 rounded-full bg-text-onyx text-white font-mono text-xs uppercase font-semibold hover:bg-neutral-800 active:scale-95 transition-all shadow-md flex items-center justify-center gap-2">
+            <div class="flex items-center gap-2 pt-4 border-t border-neutral-100">
+              <a href="Azwar-Riansyah/index.html" class="flex-1 py-2.5 px-4 rounded-full bg-black text-white font-mono text-xs uppercase font-medium hover:bg-neutral-800 active:scale-95 transition-all flex items-center justify-center gap-2">
                 <span>Buka Portofolio</span>
                 <span class="material-symbols-outlined text-sm">arrow_outward</span>
               </a>
@@ -521,25 +469,21 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="w-full bg-[#07090E] text-text-zinc py-12 border-t border-border-hairline-dark">
-    <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
-      <div class="flex flex-col items-center md:items-start gap-1">
-        <div class="flex items-center gap-2">
-          <span class="font-mono text-xs font-bold text-white tracking-widest uppercase">KELOMPOK 2 • TI UIN JAKARTA</span>
-          <span class="px-2 py-0.5 rounded-full font-mono text-[9px] bg-white/10 text-white border border-white/10">UTS SISTEM BASIS DATA</span>
-        </div>
-        <p class="text-xs text-text-zinc mt-1">
-          Dosen Pengampu: Rizal Broer Bahaweres, S.Kom., M.Sc. (rizalbroer@uinjkt.ac.id)
-        </p>
-      </div>
-      <div class="flex items-center gap-4 text-xs font-mono">
-        <a href="https://github.com/Azwarrian/Group2_Github_Basics" target="_blank" rel="noopener" class="text-text-silver hover:text-white transition">GitHub Repo</a>
+  <!-- MINIMAL MONOCHROME FOOTER -->
+  <footer class="w-full bg-[#060608] text-neutral-500 py-10 border-t border-border-dark">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-4 font-mono text-xs">
+      <div class="flex items-center gap-2">
+        <span class="text-white font-semibold uppercase tracking-wider">KELOMPOK 2</span>
         <span>•</span>
-        <a href="https://group2-github-basics-rh6x.vercel.app" target="_blank" rel="noopener" class="text-text-silver hover:text-white transition">Live Deployment</a>
+        <span>TI UIN Jakarta</span>
       </div>
-      <div class="font-mono text-[11px] text-text-zinc text-center md:text-right">
-        © 2026 Kelompok 2. Teknik Informatika UIN Syarif Hidayatullah Jakarta.
+      <div class="flex items-center gap-4">
+        <a href="https://github.com/Azwarrian/Group2_Github_Basics" target="_blank" rel="noopener" class="text-neutral-400 hover:text-white transition">GitHub Repository</a>
+        <span>•</span>
+        <a href="https://group2-github-basics-rh6x.vercel.app" target="_blank" rel="noopener" class="text-neutral-400 hover:text-white transition">Live Vercel</a>
+      </div>
+      <div class="text-neutral-600">
+        © 2026 Kelompok 2
       </div>
     </div>
   </footer>
