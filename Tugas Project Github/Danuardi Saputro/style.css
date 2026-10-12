@@ -342,42 +342,14 @@ section.alt{
 .hero{ padding: 88px 0 96px; overflow: hidden; }
 .hero .wrap{ max-width: 840px; }
 .hero-content{ display: flex; flex-direction: column; }
-.hero-badges{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-.hero-role{
-  font-family: 'JetBrains Mono', monospace;
-  color: var(--cyan);
-  font-size: 0.84rem;
-  display: inline-block;
-  padding: 4px 13px;
-  background: var(--cyan-tint);
-  border: 1px solid rgba(6, 182, 212, 0.25);
-  border-radius: 999px;
-}
-.hero-status{
-  font-family: 'JetBrains Mono', monospace;
-  color: var(--ink-faint);
-  font-size: 0.8rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 4px 13px;
-  background: var(--glass-surface);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  backdrop-filter: var(--glass-blur);
-}
 .status-dot{
   width: 7px;
   height: 7px;
   border-radius: 50%;
   background: #10B981;
   box-shadow: 0 0 8px #10B981;
+  display: inline-block;
+  flex-shrink: 0;
 }
 .hero h1{
   font-size: clamp(2.8rem, 5vw, 4rem);
@@ -432,12 +404,20 @@ section.alt{
   border-color: var(--border-highlight);
 }
 
-.hero-stats{
+.hero-footer-bar{
   display: flex;
-  gap: 18px;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 16px;
   margin-top: 42px;
   padding-top: 26px;
   border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+.hero-stats{
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
 }
 .stat{
   padding: 12px 20px;
@@ -446,6 +426,9 @@ section.alt{
   border-radius: 14px;
   backdrop-filter: var(--glass-blur);
   box-shadow: var(--glass-shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .stat b{
   display: block;
@@ -456,6 +439,34 @@ section.alt{
 .stat span{
   font-size: 0.78rem;
   color: var(--ink-faint);
+}
+
+.hero-side-card{
+  padding: 12px 22px;
+  background: var(--glass-surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+.hero-side-role{
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--cyan);
+  display: block;
+}
+.hero-side-status{
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 /* ---------- About ---------- */
