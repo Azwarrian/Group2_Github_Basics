@@ -243,15 +243,6 @@ ul{ list-style: none; margin: 0; padding: 0; }
   max-width: 600px;
   margin-bottom: 40px;
 }
-.section-head .kicker{
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.8rem;
-  color: var(--cyan);
-  margin-bottom: 8px;
-  display: block;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
 .section-head h2{ font-size: clamp(1.8rem, 3vw, 2.3rem); }
 .section-head p{ color: var(--ink-faint); margin-top: 10px; font-size: 0.98rem; }
 

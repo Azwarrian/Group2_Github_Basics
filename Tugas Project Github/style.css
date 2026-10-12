@@ -13,7 +13,7 @@
   --ink: #F3EFEA;
   --ink-soft: #A79E97;
   --line: #322E38;
-  --danuardi: #DE8C2B;
+  --danuardi: #06B6D4;
   --anugrah: #FF5B3C;
   --azwar: #34D6C0;
   --max: 780px;
@@ -86,14 +86,6 @@ h1{
 .entry[data-accent="anugrah"]:hover{ border-left-color: var(--anugrah); }
 .entry[data-accent="azwar"]:hover{ border-left-color: var(--azwar); }
 
-.entry .num{
-  font-family: 'Fraunces', serif;
-  font-size: 1rem;
-  color: var(--ink-soft);
-  width: 28px;
-  flex-shrink: 0;
-}
-
 .entry .dot{
   width: 9px; height: 9px;
   border-radius: 50%;
@@ -140,7 +132,6 @@ footer{
   .page{ padding: 60px 22px; }
   h1{ font-size: 2.4rem; }
   .entry{ gap: 16px; }
-  .entry .num{ display: none; }
   .entry-body .name{ font-size: 1.15rem; }
 }
 
