@@ -294,28 +294,27 @@ section.alt{
 .back-link{
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 14px;
-  border-radius: 999px;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
   background: var(--glass-surface);
   border: 1px solid var(--border);
   border-top: 1px solid var(--border-top);
   box-shadow: var(--glass-shadow);
   color: var(--ink-soft);
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.78rem;
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   transition: all .2s ease;
 }
-.back-link svg{ width: 13px; height: 13px; }
+.back-link svg{ width: 16px; height: 16px; }
 .back-link:hover{
   background: var(--glass-surface-hover);
-  color: var(--ink);
+  color: var(--cyan);
   border-color: var(--border-highlight);
   border-top-color: var(--border-highlight);
   box-shadow: var(--glass-shadow-hover);
-  transform: translateX(-2px);
+  transform: translateX(-2px) scale(1.05);
 }
 .nav-right{
   display: flex;
