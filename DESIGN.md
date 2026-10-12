@@ -1,101 +1,76 @@
-# DESIGN.md — Personal Portfolio Design System: Danuardi Saputro
+# DESIGN.md — Group Multi-Portfolio Platform: Kelompok 2 (Tugas Github Basics)
 
 ## 1. Product Overview & Identity
-- **Product Name:** Danuardi Saputro — Machine Learning & Applied AI Portfolio
-- **Target Audience:** Recruiters, engineering hiring managers, academic evaluators, and research collaborators.
-- **Core Value Proposition:** Highlighting end-to-end Machine Learning and AI engineering capability—from data cleansing and exploratory analysis to model training, evaluation metrics, and shipping live interactive interfaces (Streamlit / Web).
-- **Brand Personality:** Analytical, academic yet modern, methodical, credible, clean, and data-centric.
+- **Product Name:** Kelompok 2 Multi-Portfolio Hub — Tugas Project Github (UTS Sistem Basis Data)
+- **Institution:** Program Studi Teknik Informatika, Fakultas Sains dan Teknologi, UIN Syarif Hidayatullah Jakarta.
+- **Product Architecture:** A centralized group landing portal (`index.html`) serving as an interactive gateway to three distinct, specialized student portfolios:
+  1. **Danuardi Saputro** — *Machine Learning & Applied AI*
+  2. **Anugrah Linson Putra Aditama** — *UI/UX Design & Visual Design*
+  3. **Azwar Riansyah** — *Data Engineering & Machine Learning*
+- **Target Audience:** Course lecturers (Pak Rizal Broer Bahaweres), academic evaluators, tech recruiters, and industry partners.
+- **Core Value Proposition:** Demonstrating collaborative Git workflow, modern frontend development, and personal branding for three specialized computing disciplines within a unified cloud-deployed platform.
 
 ---
 
-## 2. Visual Theme & Aesthetic Direction
-- **Concept Archetype:** *"Research Notebook & Interactive Model Card"*
-- **Look & Feel:** High-contrast editorial layout that combines academic precision (editorial serif headers, monospace metrics) with modern software product design (smooth micro-interactions, clean cards, subtle backdrop blur, and accessible contrast).
-- **Theme Mode:** Refined light paper theme with deep navy ink and purposeful data accents. Supports dark mode transition with deep slate (`#0B0F19`) surfaces.
+## 2. Visual Theme & Multi-Archetype Aesthetics
+
+### A. Central Hub / Portal (The Directory Gateway)
+- **Concept:** Minimalist, editorial directory inspired by modern tech collective showcases.
+- **Layout:** High-contrast index with numbered interactive rows (`01`, `02`, `03`), dynamic hover accents, and clean micro-interactions.
+- **Accent Signals:** Distinct color accents per member (Amber/Teal for Danuardi, Coral/Violet for Anugrah, Emerald/Cyan for Azwar).
+
+### B. Member Portfolio 1: Danuardi Saputro (ML & AI)
+- **Archetype:** *"Research Notebook & Interactive Model Card"*.
+- **Style:** Technical paper background (`#EEF1F6`), deep navy typography (`#17213D`), teal badges (`#106B6B`), Newsreader serif headings, and monospace metric chips (3.96 GPA, 3 ML models, 0.81 ROC-AUC).
+
+### C. Member Portfolio 2: Anugrah Linson Putra Aditama (UI/UX)
+- **Archetype:** *"Playful Creative Studio & Visual Canvas"*.
+- **Style:** Dynamic geometric shapes/blobs, vibrant warm gradients, human-centered layout, Figma & Canva design system showcases, and 3.76 IPK badge.
+
+### D. Member Portfolio 3: Azwar Riansyah (Data Engineering)
+- **Archetype:** *"Interactive Developer Terminal & Code Console"*.
+- **Style:** Dark terminal window widget (`$ cat profile.json`), CLI prompt aesthetics, structured pipeline diagrams, data engineering stack (SQL, Python, ETL), and 3.79 IPK metric.
 
 ---
 
-## 3. Color Palette & Design Tokens
+## 3. Global Color System & Design Tokens
 
-### Primary & Neutral System
-- **Background Main (`--bg`):** `#EEF1F6` (Cool technical paper grey-white)
-- **Background Alternate (`--bg-alt`):** `#E4E8F0` (Slightly deeper contrast section background)
-- **Surface / Card (`--surface`):** `#FFFFFF` (Pure white card surfaces)
-- **Ink Primary (`--ink`):** `#12172A` (Deep charcoal navy for primary headings and body)
-- **Ink Secondary (`--ink-soft`):** `#545C74` (Muted body text and secondary descriptions)
-- **Ink Faint (`--ink-faint`):** `#8890A6` (Captions, timestamps, metadata)
-- **Border Default (`--border`):** `#D6DBE6` (Crisp subtle hairline borders)
+### Unified Tokens
+- **Background Root:** `#0B0F19` (Dark mode portal accents) / `#F8FAFC` (Light editorial base).
+- **Surface Elevation:** `#FFFFFF` (Light cards) / `#1E293B` (Dark cards).
+- **Text Headings:** `#0F172A` (Light mode) / `#F1F5F9` (Dark mode).
+- **Text Muted:** `#64748B`.
+- **Border Default:** `#E2E8F0` / `#334155`.
+- **Radius:** `12px` to `16px` for cards and badges.
 
-### Semantic & Accent Colors
-- **Navy Accent (`--navy`):** `#17213D` (Sophisticated deep slate navy for brand typography)
-- **Teal / AI Accent (`--teal`):** `#106B6B` (Engineering precision, badges, active states)
-- **Teal Tint (`--teal-tint`):** `#DDEEEC` (Soft background pills for models & metrics)
-- **Amber Accent (`--amber`):** `#DE8C2B` (Highlights, status indicators, badges)
-- **Amber Tint (`--amber-tint`):** `#FBEBD4` (Notice highlights, feature callouts)
+### Member Personal Accent Palette
+- **Danuardi Saputro:** Amber (`#DE8C2B`) & Teal (`#106B6B`).
+- **Anugrah Linson:** Warm Indigo (`#6366F1`) & Coral Rose (`#F43F5E`).
+- **Azwar Riansyah:** Terminal Emerald (`#10B981`) & Cyber Cyan (`#06B6D4`).
 
 ---
 
 ## 4. Typography Hierarchy
-
-### Font Families
-- **Display / Editorial Headings:** `Newsreader`, Georgia, or modern serif (Weights: 500, 600) — communicates editorial credibility and academic rigor.
-- **Interface & Body Text:** `IBM Plex Sans`, `Inter`, or `Plus Jakarta Sans` (Weights: 400, 500, 600, 700) — clean, highly legible technical sans-serif.
-- **Data & Numerical Metrics:** `IBM Plex Mono` or `JetBrains Mono` (Weights: 400, 500) — used for figure numbers (`Fig. 01`), statistical metrics (`ROC-AUC 0.81`, `GPA 3.96`), and timestamps.
-
-### Scale & Spacing
-- **Hero Title:** `clamp(2.4rem, 5vw, 3.6rem)` with `-0.02em` tracking.
-- **Section Headings (H2):** `clamp(1.7rem, 3vw, 2.3rem)`.
-- **Card Titles (H3):** `1.25rem` to `1.4rem`.
-- **Body Text:** `16px` base (`1.0rem`), `line-height: 1.6`.
-- **Metadata / Kickers:** `0.8rem` uppercase monospace with letter spacing.
+- **Portal & Shared Headings:** `Plus Jakarta Sans` / `Inter` / `Newsreader` (Editorial weight 600–700).
+- **Body Text:** `Inter` / `IBM Plex Sans` (400, 500, 600) with 1.6 line height.
+- **Code & Numerical Metrics:** `IBM Plex Mono` / `JetBrains Mono` for terminal commands, figures, and IPK/GPA badges.
 
 ---
 
-## 5. Layout Architecture & Key Sections
+## 5. Information Architecture & Navigation Flow
 
-1. **Global Sticky Navigation Bar:**
-   - Monogram logo (`DS` in minimalist rounded mark).
-   - Clean anchor links (`About`, `Projects`, `Certifications`).
-   - Prominent call-to-action button (`Contact`).
-   - Frosted glass effect (`backdrop-filter: blur(10px)`).
+```
+[Central Landing Portal: index.html]
+  ├── (01) Danuardi Saputro  ──> /Danuardi Saputro/index.html (ML & AI Portfolio)
+  ├── (02) Anugrah Linson    ──> /Anugrah Linson Putra Aditama/index.html (UI/UX Portfolio)
+  └── (03) Azwar Riansyah    ──> /Azwar-Riansyah/index.html (Data Engineering Portfolio)
+       │
+       └── Back Navigation Button on every portfolio page returning to Central Hub
+```
 
-2. **Hero Header:**
-   - Role badge: *"Informatics Engineering student — Machine Learning & AI"*.
-   - Value lede highlighting end-to-end model development and UIN Syarif Hidayatullah Jakarta affiliation.
-   - Dual CTA: Primary button (*View projects*) + Ghost button (*Get in touch*).
-   - **Key Metric Indicators:**
-     - `3.96` (Cumulative GPA out of 4.00)
-     - `3` (ML models shipped to production/Streamlit)
-     - `0.81` (Best ROC-AUC score)
-   - Profile Portrait Frame with status tag (*Open to internships*).
-
-3. **About & Academic Profile:**
-   - Narrative story focusing on data-driven engineering and UI delivery.
-   - Formal education card (Bachelor of Informatics Engineering, UIN Syarif Hidayatullah Jakarta).
-
-4. **Technical Skills Taxonomy:**
-   - Grouped categorized cards:
-     - *Modeling & ML:* Python, TensorFlow, PyTorch, Scikit-Learn, XGBoost.
-     - *Data & Deployment:* Pandas, NumPy, Streamlit, Git, SQL.
-     - *Design & Visual:* Figma, Adobe Photoshop.
-
-5. **Case Studies / Featured Projects:**
-   - Card format numbered like research notebook figures (`Fig. 01`, `Fig. 02`, `Fig. 03`).
-   - Project 1: **Diagnostic Liver Disease Prediction** (LFT data, XGBoost, Streamlit app, ROC-AUC 0.76).
-   - Project 2: **Customer Churn Prediction** (Behavioral subscription data, Random Forest, ROC-AUC 0.81).
-   - Project 3: **House Price Prediction** (Property & geographic regression, XGBoost, R² 0.87).
-   - Pill tags for tools and technical metrics.
-
-6. **Certifications & Professional Learning:**
-   - Multi-column grid showcasing credentials from Dicoding (ASAH AI 2026, AI Minicamp), DBS Foundation Coding Camp, and IBM SkillsBuild.
-
-7. **Contact & Professional Presence:**
-   - Actionable direct channels: Email, WhatsApp/Phone.
-   - Verified profile links: LinkedIn (`danuardi-saputro`), GitHub Primary (`Danuardi-Saputro`), GitHub Developer (`dnnuuyzzo`).
-
----
-
-## 6. Components & Design Tokens
-- **Corner Radius:** `8px` to `12px` (`--radius: 10px`) for soft modern cards.
-- **Shadows:** Subtle layered shadows (`0 10px 30px -18px rgba(18, 23, 42, 0.25)`).
-- **Interactions:** Hover states with smooth translate (`translateY(-2px)`), high contrast keyboard focus rings, and responsive mobile-first drawer navigation.
+### Core Features Across All Pages
+1. **Responsive Header & Drawer Menu:** Mobile-first collapse with blur backdrop.
+2. **Featured Hero Section:** Personal punchline, role tag, GPA/IPK metrics, and primary CTA.
+3. **Structured Body Sections:** About, Case Studies / Projects, Technical Skills, and Certifications / Organizations.
+4. **Interactive Contact & Social Links:** Real verified channels (Email, LinkedIn, GitHub).
+5. **Fast Performance:** Optimized assets, Tailwind CSS integration, zero bloat, instant cloud delivery.
