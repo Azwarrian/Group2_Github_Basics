@@ -13,7 +13,7 @@
   --ink: #F3EFEA;
   --ink-soft: #A79E97;
   --line: #322E38;
-  --danuardi: #DE8C2B;
+  --danuardi: #06B6D4;
   --anugrah: #FF5B3C;
   --azwar: #34D6C0;
   --max: 780px;
@@ -50,54 +50,41 @@ ul{ list-style: none; margin: 0; padding: 0; }
 
 .eyebrow{
   color: var(--ink-soft);
-  font-size: 0.92rem;
+  font-size: 0.84rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 h1{
-  font-size: clamp(2.3rem, 9vw, 3rem);
-  font-weight: 600;
+  font-size: clamp(2.4rem, 8vw, 3.4rem);
+  font-weight: 500;
   line-height: 1.1;
-  margin-top: 10px;
-}
-
-.intro{
-  color: var(--ink-soft);
-  margin-top: 18px;
-  max-width: 46ch;
-  font-size: 1.02rem;
-  line-height: 1.6;
+  margin-top: 8px;
+  letter-spacing: -0.02em;
 }
 
 .directory{
-  margin-top: 56px;
+  margin-top: 48px;
   border-top: 1px solid var(--line);
 }
 
 .entry{
   display: flex;
   align-items: center;
-  gap: 26px;
-  padding: 26px 4px;
+  gap: 20px;
+  padding: 24px 6px;
   border-bottom: 1px solid var(--line);
   border-left: 2px solid transparent;
   position: relative;
   transition: border-color .2s ease, padding-left .2s ease, background .2s ease;
 }
 .entry:hover{
-  padding-left: 18px;
+  padding-left: 16px;
   background: rgba(255,255,255,0.02);
 }
 .entry[data-accent="danuardi"]:hover{ border-left-color: var(--danuardi); }
 .entry[data-accent="anugrah"]:hover{ border-left-color: var(--anugrah); }
 .entry[data-accent="azwar"]:hover{ border-left-color: var(--azwar); }
-
-.entry .num{
-  font-family: 'Fraunces', serif;
-  font-size: 1rem;
-  color: var(--ink-soft);
-  width: 28px;
-  flex-shrink: 0;
-}
 
 .entry .dot{
   width: 9px; height: 9px;
@@ -145,7 +132,6 @@ footer{
   .page{ padding: 60px 22px; }
   h1{ font-size: 2.4rem; }
   .entry{ gap: 16px; }
-  .entry .num{ display: none; }
   .entry-body .name{ font-size: 1.15rem; }
 }
 

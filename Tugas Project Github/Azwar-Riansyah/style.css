@@ -74,6 +74,31 @@ section.alt{ background: rgba(255,255,255,0.015); border-top: 1px solid var(--bo
   border-bottom: 1px solid var(--border);
 }
 .nav .wrap{ display: flex; align-items: center; justify-content: space-between; height: 70px; }
+.nav-brand-group{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.back-link{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--ink-soft);
+  transition: all .2s ease;
+  flex-shrink: 0;
+}
+.back-link svg{ width: 16px; height: 16px; }
+.back-link:hover{
+  background: var(--surface-2);
+  border-color: var(--teal);
+  color: var(--teal);
+  transform: translateX(-2px);
+}
 .brand{ display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; color: var(--ink); }
 .brand .dot{ width: 9px; height: 9px; border-radius: 50%; background: var(--signal); }
 .nav-links{ display: flex; align-items: center; gap: 30px; }
@@ -221,6 +246,7 @@ footer .wrap{ display: flex; justify-content: space-between; color: var(--ink-fa
 @media (max-width: 640px){
   section{ padding: 60px 0; }
   .wrap{ padding: 0 20px; }
+  .nav-brand-group{ gap: 10px; }
   .nav-links{
     position: fixed; top: 70px; left: 0; right: 0;
     background: var(--surface);
